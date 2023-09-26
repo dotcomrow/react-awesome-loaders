@@ -17,6 +17,7 @@ jobs:
               with:
                 node-version: 16
             - run: npm ci
+            - run: npm run build --if-present
             
       
       publish-npm:
@@ -28,7 +29,10 @@ jobs:
               with:
                 node-version: 16
                 registry-url: https://registry.npmjs.org/
-            - run: npm install --unhandled-rejections=strict; npm ci;
+            - run: |
+                npm install --unhandled-rejections=strict; 
+                npm ci;
+                npm run build --if-present;
             - run: npm publish
               env:
                 NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

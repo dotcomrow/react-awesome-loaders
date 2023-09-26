@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-loaders-py3",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "High quality, super responsive and completely customisable Loading Animations to insert into your website with single line of code.",
   "main": "./lib/index.js",
   "dependencies": {
